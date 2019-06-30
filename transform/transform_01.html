@@ -1,22 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Interative Web</title>
 </head>
+<style>
+    .box-container {
+        display: flex;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        background: rgba(255, 255, 0, 0.7);
+    }
+
+    .box:hover {
+        /* width: 200px;
+        height: 200px; */
+        /* transform: scale(2) rotate(15deg); */
+        /* transform: skewY(-30deg); */
+        /* transform: translate(30px, 10px); */
+        /* transform: translateY(-30px); */
+        transform: scale(1.5);
+        /* transform-origin: left top; */
+        transform-origin: 0% 50%;
+    }
+</style>
+
 <body>
     <h1>CSS Transform</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quasi, est libero illum voluptate eveniet
+        cupiditate labore accusamus sequi nihil magnam impedit? Fuga doloribus consectetur dicta, laborum similique
+        cupiditate nihil.
+    </p>
+    <div class="box-container">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">D</div>
+        <div class="box">E</div>
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quasi, est libero illum voluptate eveniet
+        cupiditate labore accusamus sequi nihil magnam impedit? Fuga doloribus consectetur dicta, laborum similique
+        cupiditate nihil.
+    </p>
 </body>
+
 </html>
 
 <!-- 
-    Transform
-    
+    [Transform 기능 특징]
     1. 위치이동 크기변경 등의 변형과 관련된 기능
     2. position: absolute의 left, top등으로 이동 시킬수는 있지만 Transform이 더 많은 기능이 있다.
     3. Transform은 기본 (0, 0)의 좌표와 다르게 기준점이 기본적으로 가운데라서 편하고 기준점을 자유자재로 바꿀 수 있다.
     4. 회전, 비틀기, 3D 등 사용가능
     5. Translate로 이동 시키는 것이 하드웨어 가속(GPU)을 사용하기 때문에 더 부드럽게 이동하는 것처럼 보이고 성능이 좋다.
+
+    [.box:hover]
+    width heigth를 두배로 하면 다른 엘리먼트를 밀어내면서 커지기 때문에 reflow 연산과정이 발생한다. transform: scale은 다른 엘리먼트틀 건드리지 않고 효과를 나타내므로 성능에 이점을 가져올 수 있다.(transform을 사용하지 않고 같은 효과를 내려면 좀 복잡해지고 reflow연산이 이루어진다.)
+
+    [Transform 속성]
+    1. scale            : 크기를 키운다.
+    2. rotate           : 회전 시킨다.
+    3. skew(Y or X)     : 요소의 경사를 변형 시킨다.
+    4. translate        : 이동 시킨다.
 -->
